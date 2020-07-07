@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>DUB DUB DATA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>DUB DUB DATA</h1>
+    <img src="img/rickandmortylogo.png" alt="Logo Rick&Morty">
+      <a href="index">Inicio</a>
+  </header>
+<!-- Personajes de la serie-->
+  <section>
+    <p>A continuación te presentamos los personajes de Rick and Morty, puedes dar click sobre el personaje para objeter más información. Sientete libre de explorarolos, puedes filtrarlos y ordenarlos.</p>
+    <div class="botton">
+      <button type="button" class="btn">Filtrar por episodio</button>
+      <button type="button" class="btn">Ordenar por ubicación</button>
+    </div>
+    <div id="container">
+  </div>
+  </section>
+<!-- Tarjeta con la información del personaje seleccionado-->
+  <section id="myModal" class="modal">
+    <div class="modal-content">
+      <header class="modal-header" id="closeModal">
+        <h2 id="header">PORTAL ACCESS CARD</h2>
+        <span class="close">&times;</span>
+      </header>
+      <article id="bodyModal" class="modal-body">
+        <div id="imgElement"></div>
+        <div id="contentElement"></div>
+      </article>
+  </div>
+</section>
+  <section>
+      <button id="seeMore">Ver más</button>
+  </section>
+  <footer>
+ <p>Serie creada por Justin Roiland y Dan Harnoo, 2013</p>
+ <div class="icon">
+   <a href="https://es-la.facebook.com/RickandMorty/" id="facebook"></a>
+   <a href="https://www.reddit.com/r/rickandmorty/" id="reddit"></a>
+   <a href="https://www.pinterest.es/jhonregar19/rick-and-morty/" id="pinterest"></a>
+   <a href="https://www.rick-morty.online/" id="website"></a>
+ </div>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

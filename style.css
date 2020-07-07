@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik:wght@700&display=swap');
+
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Pangolin', cursive;
+}
+
+body, a, button{
+  color: #FAF7F7;
+  background: #0A0909;
+  text-decoration: none;
+}
+
+img{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+header, footer{
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: solid #87EFEC;
+  border-width: 5px 0px;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+header{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 15px;
+}
+
+h1{
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  color: #FAF7F7;
+  -webkit-text-stroke: 1px #037D8D;
+}
+
+footer{
+  display: grid;
+  grid-template-rows:repeat(2,1fr);
+}
+
+.icon{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+#reddit:after{
+  padding: 10px;
+  content: url('https://api.iconify.design/simple-icons:reddit.svg?color=%23C5D729&height=24');
+
+}
+
+#facebook:after{
+  padding: 10px;
+  content: url('https://api.iconify.design/simple-icons:facebook.svg?color=%23C5D729&height=24');
+
+}
+
+#pinterest:after{
+  padding: 10px;
+  content: url('https://api.iconify.design/simple-icons:pinterest.svg?color=%23C5D729&height=24');
+
+}
+#website:after{
+  padding: 10px;
+  content: url('https://api.iconify.design/whh:website.svg?color=%23C5D729&width=24&height=24');
+}
+
+section{
+  padding: 20px;
+  align-items: center;
+  display: block;
+  justify-content: center;
+}
+
+.botton{
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn{
+  margin: 10px;
+  padding: 5px;
+  background: #79E8F6;
+  border-radius: 5px;
+  border: 2px solid #2DDB0B;
+  color: #021619;
+  box-shadow: 0 0 15px #2DDB0B;
+}
+
+#seeMore{
+  display: block;
+  align-self: center;
+  background: #0A0909;
+  border: 0px;
+  text-decoration: underline;
+  margin: auto;
+}
+
+/* Characters*/
+#container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap: 15px;
+  justify-content: space-around;
+}
+
+div, .select{
+  display: inline-block;
+  position: relative;
+}
+
+  .select{
+    border: 3px solid #EBFF3E;
+  }
+
+  .selectname {
+    position: absolute;
+    bottom: 8px;
+    left: 4px;
+    right: 4px;
+    text-align: center;
+    color: #EBFF3E;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+  }
+
+/* Modal Window*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+  .modal-content {
+    margin: auto;
+    max-width: 300px;
+    max-height: 500px;
+    color: #000000;
+    text-align: center;
+    background-color: #FAF7F7;
+    border: 1px solid #888;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+/* The Close Button */
+.close {
+  color: #D3FCCB;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #176E06;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-gap: 0;
+  background-color: #2FE40B;
+  border: solid #176E06;
+  border-width: 2px 0px;
+}
+
+.modal-header h2{
+  font-size: 20px;
+}
+
+.modal-body, #contentElement {
+  display: grid;
+  grid-gap: 15px;
+  padding: 10px;
+}
+
+#imgElement img{
+  margin:auto;
+  width: 50%;
+  border-radius: 3px;
+  border: 2px solid #000000;
+}
+
+#contentElement div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#contentElement h3{
+  font-size: 30px;
+}
+
+
+@media screen and (min-width: 740px){ 
+  section{ 
+    padding: 10px 100px;
+  }
+
+  #container{
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+}
+
+  .modal-content{
+    max-width: 500px;
+    max-height: 300px;
+  }
+
+  .modal-body {
+    display: grid;
+    padding: 10px;
+    max-width: 500px;
+    max-height: 300px;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #imgElement img{
+    width: 100%;
+}
+
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik:wght@700&display=swap');
+@import url('font/get_schwifty.ttf');
+
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #FAF7F7;
+  font-family: 'Pangolin', cursive;
+
+}
+
+body {
+  background-image: url('img/galaxy.jpg');
+}
+
+header, footer{
+  margin: 30px;
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background: #79E8F6;
+  border-radius: 5px;
+  border: 2px solid #2DDB0B;
+  color: #021619;
+  box-shadow: 0 0 15px #2DDB0B;
+  text-decoration: none;
+}
+
+h1{
+  font-family: "Get Schwifty";
+  font-size: 60px;
+  color: #3FE6FB;
+  text-shadow: 1px 1px 5px #2DDB0B, 1px -1px 5px #2DDB0B, -1px 1px 5px #2DDB0B, 1px 1px 5px , 0 1px 5px #2DDB0B, -1px 0 5px #2DDB0B, -1px 0 5px #2DDB0B, 0 -1px 5px #2DDB0B;
+  -webkit-text-stroke: 0.03px #05434B;
+  }
+
+main{
+  display: grid;
+  padding: 16px;
+  grid-auto-rows: auto;
+  grid-gap: 15px;
+}
+
+img{
+  width: 100%;
+  margin: auto;
+
+}
+
+@media screen and (min-width: 740px){
+  main{
+    padding: 0px 100px;
+  }
+  header, footer{
+    margin: 40px;
+    text-align: center;
+  }
+  h1{
+    font-size: 80px;
+  }
+  img{
+    display: block;
+    width: 50%;
+  }
+}
