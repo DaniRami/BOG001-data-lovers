@@ -14,6 +14,18 @@ const data = {
     return filtered;
   }
 }
+
+statusByChara: (dato, status) => {
+ let  
+
+
+}
+
+
+
+
+
+
 export default data;
   
 
