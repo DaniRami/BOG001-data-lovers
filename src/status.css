@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik:wght@700&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Pangolin', cursive;
+  }
+  
+  body, a, button{
+    color: #FAF7F7;
+    background: #0A0909;
+    text-decoration: none;
+     
+  }
+
+  img{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+  
+ header, footer{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: solid #87EFEC;
+    border-width: 5px 0px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 15px;
+
+}
+
+h1{
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    color: #FAF7F7;
+    -webkit-text-stroke: 1px #037D8D;
+}
+
+footer{
+    display: grid;
+    grid-template-rows:repeat(2,1fr);
+  }
+  
+  .icon{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #reddit::after{
+    padding: 10px;
+    content: url('https://api.iconify.design/simple-icons:reddit.svg?color=%23C5D729&height=24');
+  
+  }
+  
+  #facebook::after{
+    padding: 10px;
+    content: url('https://api.iconify.design/simple-icons:facebook.svg?color=%23C5D729&height=24');
+  
+  }
+  
+  #pinterest::after{
+    padding: 10px;
+    content: url('https://api.iconify.design/simple-icons:pinterest.svg?color=%23C5D729&height=24');
+  
+  }
+  #website::after{
+    padding: 10px;
+    content: url('https://api.iconify.design/whh:website.svg?color=%23C5D729&width=24&height=24');
+  }
+  

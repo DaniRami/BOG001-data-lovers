@@ -9,21 +9,23 @@
 </head>
 
 <body>
-  <header>
+<header>
     <h1>DUB DUB DATA</h1>
     <img src="img/rickandmortylogo.png" alt="Logo Rick&Morty">
-      <a href="index">Inicio</a>
+     <a href="index.html">Inicio</a>
+     <a href="status.html">Datos</a>
   </header>
 <!-- Personajes de la serie-->
+<main>
   <section>
     <p>A continuación te presentamos los personajes de Rick and Morty, puedes dar click sobre el personaje para objeter más información. Sientete libre de explorarolos, puedes filtrarlos y ordenarlos.</p>
     <div class="botton">
       <select type="button" class="btn" id="filter">
         <option  value="0">Filtrar por episodio</option>
       </select>
-       <select type="button" class="btn" id="Sort"> 
-         <option disabled> Ordenar por specie </option>
-         <option selected value="Ascendente">Ascendente</option>
+       <select type="button" class="btn" id="Sort">
+         <option value="0"> Ordenado alfabético </option>
+         <option  value="Ascendente">Ascendente</option>
          <option  value="Descendente">Descendente</option>
         </select>
     </div>
@@ -46,7 +48,8 @@
   <section>
       <button id="seeMore">Ver más</button>
   </section>
-  <footer>
+   </main>
+<footer>
  <p>Serie creada por Justin Roiland y Dan Harnoo, 2013</p>
  <p>&copy; Diana Olarte & Daniela Ramirez, 2020</p>
  <div class="icon">
@@ -57,6 +60,7 @@
  </div>
   </footer>
   <script src="main.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </body>
 
 </html>

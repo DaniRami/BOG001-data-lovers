@@ -1,34 +1,58 @@
-import  filertEpisode  from '../src/data.js';
-/*import data from "../src/data/rickandmorty/rickandmorty.js"*/
+import  data from '../src/data.js';
+import rickandmorty from "../src/data/rickandmorty/mockdata.js";
 
-
- 
-describe('filertEpisode', () => {
+describe('data.filterByEpisode', () => {
   it('is a function', () => {
-    expect(typeof allfunction.filterepisode).toBe('function');
+    expect(typeof data.filterByEpisode).toBe('function');
   });
 
-  it('deberia retornar un array para el episodio 30', () => {
-    expect(typeof allfunction.filterepisode(data.results, 30)).toBe('object');
+  it('deberia retornar un object para el episodio 13', () => {
+    expect(typeof data.filterByEpisode(rickandmorty.results, "https://rickandmortyapi.com/api/episode/13")).toBe('object');
   });
 
-  it('deberia retornar Blim Blam para el episodio 14', () => {
-    expect(allfunction.filterepisode(data.results, 14)[6].name).toBe('Blim Blam');
+  it('deberia retornar Abradolf Lincler para el episodio 10', () => {
+    expect(data.filterByEpisode(rickandmorty.results, "https://rickandmortyapi.com/api/episode/10")[0].name).toBe('Abradolf Lincler');
   });
 
-  it('deberia retornar 13 personajes para el episodio 4', () => {
-    expect(allfunction.filterepisode(data.results, 4)).toHaveLength(13);
+  it('deberia retornar 2 perdonajes para el episodio 11', () => {
+    expect(data.filterByEpisode(rickandmorty.results, "https://rickandmortyapi.com/api/episode/11")).toHaveLength(2);
   });
 
 });
 
-
-/*describe('anotherExample', () => {
+describe('data.sortByName', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof data.sortByName).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('deberia retornar un object', () => {
+    expect(typeof data.sortByName(rickandmorty.results, "name","ascendente")).toBe('object');
   });
-});*/
+
+  it('deberia retornar Abadango Cluster Princess para ascendente', () => {
+    expect(data.sortByName(rickandmorty.results,"name", "Ascendente")[0].name).toBe('Abadango Cluster Princess');
+  });
+
+  it('deberia retornar Giant Testicle Monster para descendente', () => {
+    expect(data.sortByName(rickandmorty.results, "name","Descendente")[0].name).toBe("Giant Testicle Monster");
+  });
+
+});
+describe('data.averageLocations', () => {
+  it('is a function', () => {
+    expect(typeof data.averageLocations).toBe('function');
+  });
+
+  it('deberia retornar un object', () => {
+    expect(typeof data.averageLocations(rickandmorty.results, rickandmorty.info.count)).toBe('object');
+  });
+
+  it('deberia retornar 33.33 para Abadango', () => {
+    expect(data.averageLocations(rickandmorty.results,rickandmorty.info.count)['Abadango']).toBe('33.33');
+  });
+
+  it('deberia retornar array con Testicle Monster Dimension y Abadango un para keys', () => {
+    expect(Object.keys(data.averageLocations(rickandmorty.results,rickandmorty.info.count))).toStrictEqual(['Testicle Monster Dimension', 'Abadango']);
+  });
+
+});
