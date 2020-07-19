@@ -16,15 +16,13 @@ btnSort.addEventListener("change", orderByName);
 
 const modal = document.getElementById("myModal");
 
-const canvas = document.getElementById("Mychart");
- 
 
 let everyone = [];
 let currentPage = 1;
 let everyoneTemp = [];
 let count = 0;
-
 loadCharacters();
+getEpisodes();
 
 
 async function get(url) {
@@ -32,7 +30,7 @@ async function get(url) {
       let data = await fetch(url)
       return await data.json()
    } catch (error) {
-    //  console.log(`error con el servicio ${url}`);
+    console.log(`error con el servicio ${url}`);
    }
 }
 
@@ -50,6 +48,7 @@ function callPaint() {
 function more() {
    callPaint()
    if (currentPage >= everyone.length) {
+      console.log(JSON.stringify(everyone))
       document.getElementById("seeMore").disabled = true;
    }
 }
@@ -62,6 +61,7 @@ async function loadCharacters(url = "https://rickandmortyapi.com/api/character/"
       dataResult = await get(url);
       everyone = everyone.concat(dataResult.results);
       url = dataResult.info.next;
+      count = dataResult.info.count;
    }
    callPaint()
 }
@@ -162,20 +162,52 @@ function loadEpisodes(allEpisode) {
    btnFilter.appendChild(episode);
 }
 
-getEpisodes();
-
-function orderByName(event) {
+function orderByName() {
    let tempData = data.sortByName(everyoneTemp, "name", event.target.value);
    optionsHtml.innerHTML = "";
    tempData.forEach(element => paint(element));
 }
 
-/*const canvas = data.averageLocations(everyone, count); console.log(everyone, count);*/
+const statistics = ()=>{
+  const sites = data.averageLocations(everyone, count);
 
+  let alllocations = document.getElementById('myChart').getContext('2d');
+  let chartlocations = new Chart(alllocations, {
+      // The type of chart we want to create
+      type: 'doughnut',
+      // The data for our dataset
+      data: {
+          labels: Object.keys(sites),
+          datasets: [{
+              label: 'Última ubicación conocida',
+              backgroundColor: ["#176E06", "#2DDB0B", "#7BF763", "#D3FCCB", "#9BF1FD", "#38E3FB", "#04B1C9", "#037686"],
+              borderWidth: 2,
+              borderColor: "#FFFFFF",
+              hoverBorderWidth: 4,
+              data: Object.values(sites)
+          }]
+      },
+
+      // Configuration options go here
+      options: {
+        title: {
+        display: true,
+        text: 'PORCENTAJE DE PERSONAJES POR UBICACIÓN ACTUAL',
+        fontColor: "#FAF7F7",
+        fontFamily: 'Pangolin',
+        fontSize: 20,
+        },
+        legend: {
+          display: false,
+        },
+      }
+  });
+  stadisticsStatus()
+}
  
-
-
-var chart = new Chart(canvas, {
+const stadisticsStatus = () => {
+   const canvas = document.getElementById("chart").getContext('2d');
+var charts = new Chart(canvas, {
    // The type of chart we want to create
    type: 'doughnut',
 
@@ -206,13 +238,15 @@ var chart = new Chart(canvas, {
            padding: 10,
        },
        legend: {
-             
+         display: false,   
        },
    }
 });
+}
+
+const statbtn = document.getElementById("statbtn");
+statbtn.addEventListener("click", statistics);
 
 
 
-
- 
 

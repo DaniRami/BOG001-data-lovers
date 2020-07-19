@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>DUB DUB DATA</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 
 <body>
@@ -13,8 +14,7 @@
     <h1>DUB DUB DATA</h1>
     <img src="img/rickandmortylogo.png" alt="Logo Rick&Morty">
      <a href="index.html">Inicio</a>
-     <a href="status.html">Datos</a>
-  </header>
+     </header>
 <!-- Personajes de la serie-->
 <main>
   <section>
@@ -39,7 +39,7 @@
         <h2 id="header">PORTAL ACCESS CARD</h2>
         <span class="close">&times;</span>
       </header>
-      <article id="bodyModal" class="modal-body">
+      <article id="bodyModal" class="modal-body"> 
         <div id="imgElement"></div>
         <div id="contentElement"></div>
       </article>
@@ -47,6 +47,13 @@
 </section>
   <section>
       <button id="seeMore">Ver más</button>
+      <button type="button" id="statbtn">Ver estadisticas</button>
+  </section>
+  <section class ="statistics">
+    <p>Aquí podrás encontrar algunas gráficas que te permiten entender datos de la serie como los lugares más recurrentes en los que se desarrolla de acuerdo a la ubicación actual de los personajes o si quieres saber cuantos personajes se encuentran como Gato de Schrödinger a lo largo de la trama, ademas saber cuantos personajes estan vivos, muertos y estado desconocido.</p>
+      <canvas id="myChart"></canvas>
+      <br>
+      <canvas id="chart"></canvas>      
   </section>
    </main>
 <footer>

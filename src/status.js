@@ -60,4 +60,5 @@ async function loadCharacters(url = "https://rickandmortyapi.com/api/character/"
 
 
 loadCharacters();
+
 */
