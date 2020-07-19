@@ -179,7 +179,7 @@ describe('data.averageLocations', () => {
     });
 
     it('deberia retornar un object', () => {
-      expect(typeof data.statuschara(rickandmorty.results, rickandmorty.info.result)).toBe('object');
+      expect(typeof data.statuschara(mockData)).toBe('object');
     });
 
     it('deberia retornar 12.69 para  unknown', () => {
