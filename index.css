@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik:wght@700&display=swap');
-@import url('font/get_schwifty.ttf');
+
+@font-face{
+  font-family: 'get_schwiftyregular';
+  src: url('font/get_schwifty-webfont.woff2') format('woff2'),
+       url('font/get_schwifty-webfont.woff') format('woff');
+}
 
 *{
   margin:0px;
@@ -33,11 +38,11 @@ header, footer{
 }
 
 h1{
-  font-family: "Get Schwifty";
+  font-family: 'get_schwiftyregular';
   font-size: 60px;
   color: #3FE6FB;
   text-shadow: 1px 1px 5px #2DDB0B, 1px -1px 5px #2DDB0B, -1px 1px 5px #2DDB0B, 1px 1px 5px , 0 1px 5px #2DDB0B, -1px 0 5px #2DDB0B, -1px 0 5px #2DDB0B, 0 -1px 5px #2DDB0B;
-  -webkit-text-stroke: 0.03px #05434B;
+  -webkit-text-stroke: 1px #05434B;
   }
 
 main{
@@ -51,6 +56,9 @@ img{
   width: 100%;
   margin: auto;
 
+}
+p{
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 740px){

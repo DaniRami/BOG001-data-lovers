@@ -55,24 +55,24 @@ footer{
   justify-content: center;
 }
 
-#reddit:after{
+#reddit::after{
   padding: 10px;
   content: url('https://api.iconify.design/simple-icons:reddit.svg?color=%23C5D729&height=24');
 
 }
 
-#facebook:after{
+#facebook::after{
   padding: 10px;
   content: url('https://api.iconify.design/simple-icons:facebook.svg?color=%23C5D729&height=24');
 
 }
 
-#pinterest:after{
+#pinterest::after{
   padding: 10px;
   content: url('https://api.iconify.design/simple-icons:pinterest.svg?color=%23C5D729&height=24');
 
 }
-#website:after{
+#website::after{
   padding: 10px;
   content: url('https://api.iconify.design/whh:website.svg?color=%23C5D729&width=24&height=24');
 }
@@ -87,11 +87,12 @@ section{
 .botton{
   margin: 30px 0px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .btn{
+  width: 200px;
   margin: 10px;
   padding: 5px;
   background: #79E8F6;
@@ -154,7 +155,7 @@ div, .select{
   .modal-content {
     margin: auto;
     max-width: 300px;
-    max-height: 500px;
+    max-height: 520px;
     color: #000000;
     text-align: center;
     background-color: #FAF7F7;
@@ -213,12 +214,16 @@ div, .select{
 }
 
 
-@media screen and (min-width: 740px){ 
-  section{ 
+@media screen and (min-width: 740px){
+  section{
     padding: 10px 100px;
   }
+  .botton{
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-  #container{
+  #container {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 
@@ -226,7 +231,7 @@ div, .select{
 
   .modal-content{
     max-width: 500px;
-    max-height: 300px;
+    max-height: 320px;
   }
 
   .modal-body {
@@ -239,6 +244,5 @@ div, .select{
 
   #imgElement img{
     width: 100%;
-}
-
+  }
 }
