@@ -66,7 +66,7 @@ usuario necesita.
 * [x ] Manipular arrays (filter | map | sort | reduce)
 * [x ] Manipular objects (key | value)
 * [x ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-| [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
+| [x]uso es mudules([`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
 * [ ] Diferenciar entre expression y statements.
 * [x ] Diferenciar entre tipos de datos atómicos y estructurados.
 
@@ -77,7 +77,7 @@ usuario necesita.
 ### Estructura del código y guía de estilo
 
 * [ x] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
+* [x] Uso de identificadores descriptivos (Nomenclatura | Semántica)
 * [ ] Uso de linter (ESLINT)
 
 ### Git y GitHub
